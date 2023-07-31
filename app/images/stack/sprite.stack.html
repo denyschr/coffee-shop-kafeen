@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG stack preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+ .svg-beans-dims { width: 25px; height: 30px; }
+ .svg-comments-dims { width: 20px; height: 16px; }
+ .svg-cooked-beans-dims { width: 50px; height: 61px; }
+ .svg-cup-of-coffee-orange-dims { width: 50px; height: 53px; }
+ .svg-cup-of-coffee-white-dims { width: 52px; height: 53px; }
+ .svg-date-dims { width: 15px; height: 15px; }
+ .svg-desktop-logo-dims { width: 136px; height: 53px; }
+ .svg-devices-dims { width: 54px; height: 48px; }
+ .svg-facebook-dims { width: 25px; height: 25px; }
+ .svg-instagram-dims { width: 22px; height: 21px; }
+ .svg-lid-dims { width: 55px; height: 44px; }
+ .svg-linkedIn-dims { width: 21px; height: 21px; }
+ .svg-mobile-logo-dims { width: 35px; height: 53px; }
+ .svg-rating-dims { width: 164px; height: 22px; }
+ .svg-twitter-dims { width: 26px; height: 22px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+        <header>
+            <h1>SVG stack preview</h1>
+            <p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+            <ul>
+                <li>Your browser has to <a href="https://caniuse.com/svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+                <li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+            </ul>
+        </header>
+        <section>
+
+<!--
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+-->
+
+            <ul>
+
+             <li title="beans">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#beans" class="svg-beans-dims" alt="beans">
+                    </div>
+                    <h2>beans, </h2>
+                </li>
+             <li title="comments">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#comments" class="svg-comments-dims" alt="comments">
+                    </div>
+                    <h2>comments, </h2>
+                </li>
+             <li title="cooked-beans">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#cooked-beans" class="svg-cooked-beans-dims" alt="cooked-beans">
+                    </div>
+                    <h2>cooked-beans, </h2>
+                </li>
+             <li title="cup-of-coffee-orange">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#cup-of-coffee-orange" class="svg-cup-of-coffee-orange-dims" alt="cup-of-coffee-orange">
+                    </div>
+                    <h2>cup-of-coffee-orange, </h2>
+                </li>
+             <li title="cup-of-coffee-white">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#cup-of-coffee-white" class="svg-cup-of-coffee-white-dims" alt="cup-of-coffee-white">
+                    </div>
+                    <h2>cup-of-coffee-white, </h2>
+                </li>
+             <li title="date">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#date" class="svg-date-dims" alt="date">
+                    </div>
+                    <h2>date, </h2>
+                </li>
+             <li title="desktop-logo">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#desktop-logo" class="svg-desktop-logo-dims" alt="desktop-logo">
+                    </div>
+                    <h2>desktop-logo, </h2>
+                </li>
+             <li title="devices">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#devices" class="svg-devices-dims" alt="devices">
+                    </div>
+                    <h2>devices, </h2>
+                </li>
+             <li title="facebook">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#facebook" class="svg-facebook-dims" alt="facebook">
+                    </div>
+                    <h2>facebook, </h2>
+                </li>
+             <li title="instagram">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#instagram" class="svg-instagram-dims" alt="instagram">
+                    </div>
+                    <h2>instagram, </h2>
+                </li>
+             <li title="lid">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#lid" class="svg-lid-dims" alt="lid">
+                    </div>
+                    <h2>lid, </h2>
+                </li>
+             <li title="linkedIn">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#linkedIn" class="svg-linkedIn-dims" alt="linkedIn">
+                    </div>
+                    <h2>linkedIn, </h2>
+                </li>
+             <li title="mobile-logo">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#mobile-logo" class="svg-mobile-logo-dims" alt="mobile-logo">
+                    </div>
+                    <h2>mobile-logo, </h2>
+                </li>
+             <li title="rating">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#rating" class="svg-rating-dims" alt="rating">
+                    </div>
+                    <h2>rating, </h2>
+                </li>
+             <li title="twitter">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#twitter" class="svg-twitter-dims" alt="twitter">
+                    </div>
+                    <h2>twitter, </h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at Sun, 30 Jul 2023 08:33:37 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>

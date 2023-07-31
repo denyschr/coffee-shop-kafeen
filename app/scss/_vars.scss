@@ -1,0 +1,52 @@
+%os-light{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+%os-regular{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+%os-semibold{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+}
+
+%cd-regular{
+	font-family: 'Cinzel Decorative', sans-serif;
+	font-weight: 400;
+}
+
+%cd-bold{
+	font-family: 'Cinzel Decorative', sans-serif;
+	font-weight: 700;
+}
+
+%lt-400{
+	font-family: 'Lime light', sans-serif;
+	font-weight: 400;
+}
+
+:root{
+	--content-width: 1110px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+	--shark: #1C1E23;
+	--black: #000;
+	--bunker: #090C0F;
+	--woodsmoke: #0A0B0D;
+	--white: #fff;
+	--tulip-tree: #EC9F3E;
+	--ochre: #D48521;
+	--yellow-orange: #FFA737;
+	--mercury: #E3E1E1;
+	--texas-rose: #FFB353;
+	--gray: #8B8B8B;
+	--nobel: #B4B4B4;
+	--alto: #CECECE;
+	--silver: #BFBFBF;
+	--ford-silver: #BEBEBE;
+	--silver-chalice: #AEAEAE;
+}

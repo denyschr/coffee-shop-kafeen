@@ -1,0 +1,132 @@
+.footer{
+	padding-top: 80px;
+	@include tablet{
+		padding-top: 40px;
+	}
+	&__main{
+		display: flex;
+		padding-bottom: 95px;
+		border-bottom: 2px solid #55565A;
+		@include tablet{
+			flex-direction: column;
+			padding-bottom: 60px;
+		}
+	}
+	&__box{
+		max-width: 450px;
+		margin-right: 45px;
+		@include small-desktop{
+			max-width: 390px;
+			margin-right: 0;
+			margin-bottom: 40px;
+		}
+	}
+	&__logo{
+		display: inline-block;
+		margin-bottom: 17px;
+	}
+	&__text{
+		margin: 0 0 24px;
+		color: var(--ford-silver);
+		line-height: 1.6;
+		letter-spacing: 0.64px;
+	}
+	&__contacts{
+		display: flex;
+		align-items: center;
+		gap: 30px;
+	}
+	&__link{
+		color: var(--mercury);
+		transition: color .2s ease-in-out;
+		svg{
+			width: 25px;
+			height: 25px;
+			fill: currentColor;
+		}
+		@media (min-width: 1025px){
+			&:hover{
+				color: var(--yellow-orange);
+			}
+		}
+	}
+	&__info-wrap{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 173px;
+		@include small-desktop{
+			column-gap: 90px;
+		}
+		@include tablet{
+			gap: 40px;
+		}
+		@include mobile{
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	&__title{
+		margin: 0 0 25px;
+		@extend %os-semibold;
+		color: var(--white);
+		font-size: 24px;
+		line-height: 1.1;
+		letter-spacing: 0.96px;
+		@include mobile{
+			font-size: 20px;
+		}
+	}
+	&__bottom{
+		padding: 15px 0 18px;
+		text-align: center;
+	}
+	&__copy{
+		color: var(--silver-chalice);
+		font-family: 'Inter' sans-serif;
+		font-weight: 400;
+		font-size: 12px;
+	}
+}
+
+.footer__list{
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 15px;
+	&-item{
+		position: relative;
+		padding-left: 21px;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 10px;
+			left: 0;
+			display: block;
+			width: 9px;
+			height: 9px;
+			border-radius: 5px;
+			background-color: var(--silver-chalice);
+		}
+	}
+	&-link{
+		@media (min-width: 1025px){
+			&:hover .footer__list-subtitle{
+				color: var(--gray);
+			}
+		}
+	}
+	&-title{
+		margin: 0;
+		padding-bottom: 10px;
+		@extend %os-regular;
+		color: var(--tulip-tree);
+		font-size: 16px;
+		line-height: 1.6;
+		letter-spacing: 0.64px;
+	}
+	&-subtitle{
+		color: var(--white);
+		line-height: 27px;
+		letter-spacing: 0.64px;
+		transition: color .2s ease-in-out;
+	}
+}

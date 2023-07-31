@@ -1,0 +1,152 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li{
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-size: inherit;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+body{
+  background-color: var(--shark);
+  @extend %os-regular;
+}
+
+body.noscroll{
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container{
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.list-reset{
+  margin: 0;
+  padding: 0;
+}
+
+.caption{
+  position: relative;
+  display: inline-block;
+  padding-left: 28px;
+  color: var(--ochre);
+  font-size: 14px;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+  &::before{
+    content: '';
+    background-image: url('../images/svg/beans.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 25px;
+    height: 30px;
+    transform: translateY(-50%);
+  }
+  @media (max-width: 576px){
+    font-size: 10px;
+  }
+}
+
+.title{
+  @extend %cd-regular;
+  color: var(--white);
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  @media (max-width: 1140px){
+    font-size: 36px;
+  }
+  @media (max-width: 768px){
+    font-size: 30px;
+  }
+  @media (max-width: 576px){
+    font-size: 26px;
+  }
+}
+
+.text{
+  @extend %os-light;
+  color: var(--mercury);
+  color: #E3E1E1;
+  line-height: 1.6;
+  @media (max-width: 576px){
+    font-size: 14px;
+  }
+}
+
+.main-btn, .secondary-btn{
+  display: inline-block;
+  max-width: 177px;
+  width: 100%;
+  padding: 10px 18px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.32px;
+  transition: background .2s ease-in-out, color .2s ease-in-out;
+}
+
+.main-btn{
+  color: var(--woodsmoke);
+  border-radius: 2px;
+  background-color: var(--mercury);
+  box-shadow: 0px 11px 28px 0px rgba(0, 0, 0, 0.25);
+  @media (min-width: 1025px){
+    &:hover{
+      background-color: #FFA737;
+      color: var(--bunker);
+    }
+  }
+}
+
+.secondary-btn{
+  color: var(--white);
+  border-radius: 2px;
+  border: 1px solid var(--white);
+  @media (min-width: 1025px){
+    &:hover{
+      background-color: var(--white);
+      color: var(--bunker);
+    }
+  }
+}

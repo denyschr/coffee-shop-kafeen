@@ -1,0 +1,92 @@
+.catalog{
+	padding: 115px 0;
+	background-color: var(--bunker);
+	@include tablet{
+		padding: 80px 0;
+	}
+	&__top{
+		margin-bottom: 95px;
+		text-align: center;
+		@include tablet{
+			margin-bottom: 70px;
+		}
+		@include small-tablet{
+			margin-bottom: 50px;
+		}
+	}
+	&__caption{
+		margin: 0 0 22px;
+	}
+	&__title{
+		margin: 0;
+	}
+}
+
+.catalog__list{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 114px;
+	row-gap: 65px;
+	@include tablet{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	&-item{
+		display: flex;
+		align-items: center;
+		@include tablet{
+			justify-content: center;
+		}
+		@include mobile{
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+	&-img{
+		margin-right: 30px;
+		border-radius: 8px;
+		@include mobile{
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+	}
+	&-title{
+		margin: 0 0 7px;
+		@extend %cd-regular;
+		color: var(--white);
+		font-size: 25px;
+		line-height: 1.5; 
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+		@include mobile{
+			font-size: 20px;
+		}
+	}
+	&-subtitle{
+		display: inline-block;
+		margin: 0 0 26px;
+		color: var(--gray);
+		line-height: 1.3;
+		letter-spacing: 0.32px;
+		@include mobile{
+			margin: 0 0 20px;
+		}
+	}
+	&-box{
+		display: flex;
+		align-items: center;
+	}
+	&-dash{
+		flex-grow: 1;
+		padding-top: 10px;
+		border-bottom: 1px dashed var(--texas-rose);
+		border-width: 2px;
+	}
+	&-price{
+		margin-left: 5px;
+		@extend %cd-bold;
+		color: var(--texas-rose);
+		font-size: 20px;
+		line-height: 1.2;
+		letter-spacing: 0.4px;
+	}
+}
