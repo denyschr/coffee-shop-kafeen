@@ -1,4 +1,4 @@
-# [Coffee shop](https://dchornoivanenko.github.io/coffee-shop-kafeen/) for London company
+# [Coffee shop](https://denyschr.github.io/coffee-shop-kafeen/) for London company
 ## What I used for creating the website:
 - HTML
 - CSS
